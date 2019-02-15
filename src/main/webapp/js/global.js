@@ -9,10 +9,12 @@ $(function () {
   $('.countdown.styled').countdown({
     date: endDate,
     render: function (data) {
-      $(this.el).html("<div>" + this.leadingZeros(data.days, 3)
-          + " <span>days</span></div><div>" + this.leadingZeros(data.hours, 2)
+      $(this.el).html(
+          "<div class='countdownNum'>" + this.leadingZeros(data.days, 3)
+          + " <span>days</span></div><div class='countdownNum'>"
+          + this.leadingZeros(data.hours, 2)
           + " <span>hrs</span></div><div>" + this.leadingZeros(data.min, 2)
-          + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2)
+          + " <span >min</span></div><div>" + this.leadingZeros(data.sec, 2)
           + " <span>sec</span></div>");
     }
   });
@@ -30,10 +32,37 @@ $(function () {
         +(new Date) + 10000).start();
   });
 
-  $('#submit').on("click",function () {
-    var email = $('#email');
-    console.log(email)
+  $('#submit').on("click", function () {
+    var email = $('#email').val();
+    if (!validateEmail(email)) {
+      alert("hmmm…… seems like it's not an email, please check again");
+      return
+    }
+    var user = {
+      email: email
+    }
+    fetch("/api/user/subscribe", {
+      method: 'POST',
+      body: JSON.stringify(user),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(function (response) {
+      if (response.status == 200) {
+        alert("Subscribed! Thank you so much!")
+      } else if (response.status == 409) {
+        alert("Already subscribed, Thank you so much!")
+      } else {
+        alert("something goes wrong, please try again")
+      }
+    })
   });
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
 
 });
    

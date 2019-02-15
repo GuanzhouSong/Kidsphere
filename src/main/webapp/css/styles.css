@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
 
 body {
-  color: #FFF;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   min-width: 960px;
   top: 0;
@@ -12,8 +12,8 @@ body {
   margin: 0;
   color: #fff;
   background-size: cover;
-  /* background:url('../images/swirl_pattern.png') top left repeat; */
-  background: #fff;
+  background: url('../images/child.jpg') top left repeat;
+  /*background: #ffb300;*/
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -120,11 +120,12 @@ a:hover {
   padding: 16px;
   border-radius: 180px;
   padding-bottom: 80px;
+  color: #F08B00
 }
 
-.logo h1 {
-  color: #ffa61b;
-  font-weight: 600;
+.logo h2 {
+  color: #f08b00;
+  font-weight: 500;
 }
 
 .logo img {
@@ -200,10 +201,10 @@ a:hover {
   margin: 0px;
   padding: 0px;
   text-align: center;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 300;
-  color: #ffa61b;
-  margin-bottom: 40px;
+  color: #ffa120;
+  margin-bottom: 50px;
   text-transform: capitalize;
   line-height: 38px;
 }
@@ -237,10 +238,10 @@ a:hover {
 }
 
 #subscribe input { /* background: rgba(255, 255, 255, 0.52); */
-  color: #212121;
+  color: #ffab00;
   vertical-align: middle;
   width: 280px;
-  border: 1px solid #212121;
+  border: 1px solid #ffffff;
   padding: 10px;
   font-size: 14px;
 }
@@ -265,8 +266,8 @@ a:hover {
 #subscribe input[type="submit"] {
   width: 132px;
   margin-left: -1px;
-  background: #f05b5d;
-  border: 1px #f05b5d solid;
+  background: #f04e00;
+  border: 0px #8428f0 solid;
   color: #fff;
 }
 
@@ -286,16 +287,17 @@ a:hover {
 }
 
 .ended {
-  background: #c0392b;
+  color: #000000;
 }
 
+.countdownNum {
+  color: #4cae4c;
+}
 .countdown {
   text-align: center;
   margin-top: 30px;
-  background: #5381E4;
   padding: 60px 0;
-  background-size: cover;
-  background: url(../images/bg.jpg) top left repeat;
+  background-color: #ffbd00;
 }
 
 .styled div {
@@ -353,11 +355,11 @@ footer span {
 }
 
 .subscribe {
-  background: #212121;
+  background: #ff8c00;
 }
 
 .features {
-  background: #e44f51;
+  background: #ff6e00;
 }
 
 .features h2 {
@@ -376,7 +378,7 @@ footer span {
 
 .featuresPro {
   font-size: 15px;
-  color: #ffeaea;
+  color: #fff;
 }
 
 .featuresPro .icon {
@@ -440,5 +442,14 @@ footer span {
 
   footer {
     position: relative !important;
+  }
+
+  .main {
+    text-align: center;
+    margin-top: 30px;
+    background: #5381E4;
+    padding: 60px 0;
+    background-size: cover;
+    background: url(../images/child.jpg)
   }
 }
