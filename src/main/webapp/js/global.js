@@ -30,5 +30,10 @@ $(function () {
         +(new Date) + 10000).start();
   });
 
+  $('#submit').on("click",function () {
+    var email = $('#email');
+    console.log(email)
+  });
+
 });
    

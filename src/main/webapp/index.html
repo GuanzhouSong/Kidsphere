@@ -41,11 +41,13 @@ Theme by: WebThemez.com
 
     <div id="subscribe">
       <h3>Subscribe To Get Notified</h3>
-      <form method="POST" action="subscribe.php">
-        <p class="subscribe-input"><input type="text" name="Email" size="20"
-                                          placeholder="Subscribe your e-mail Id" value=""><input
-            type="submit" value="Submit" name="Subscribe"></p>
-      </form>
+
+        <p class="subscribe-input">
+          <input id="email" type="email" name="Email" size="20"
+                 placeholder="Subscribe your e-mail" value="">
+          <input id="submit" type="submit" value="Submit" name="Subscribe">
+        </p>
+
       <!--For social platform link-->
       <!--<div id="socialIcons">
         <ul>
@@ -110,8 +112,6 @@ Theme by: WebThemez.com
     </div>
   </div>
 </section>
-<span class="tempBy">Template by: <a href="http://webthemez.com"
-                                     alt="webthemez">WebThemez.com</a></span>
 
 <!--Scripts-->
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
