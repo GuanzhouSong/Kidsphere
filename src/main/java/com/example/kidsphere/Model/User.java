@@ -14,6 +14,8 @@ public class User {
 
   private String email;
 
+  private OSType osType;
+
   public int getId() {
     return id;
   }
@@ -28,5 +30,13 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public OSType getOsType() {
+    return osType;
+  }
+
+  public void setOsType(OSType osType) {
+    this.osType = osType;
   }
 }

@@ -114,17 +114,21 @@ a:hover {
   padding-top: 50px
 }
 
+.slogan {
+  color: #ff5200;
+  font-weight: 300;
+}
 .logo {
   width: auto;
   margin: 0 auto;
   padding: 16px;
   border-radius: 180px;
   padding-bottom: 80px;
-  color: #F08B00
+  color: #ff5200
 }
 
 .logo h2 {
-  color: #f08b00;
+  color: #ff5200;
   font-weight: 500;
 }
 
@@ -203,7 +207,7 @@ a:hover {
   text-align: center;
   font-size: 38px;
   font-weight: 300;
-  color: #ffa120;
+  color: #ff5200;
   margin-bottom: 50px;
   text-transform: capitalize;
   line-height: 38px;
@@ -239,11 +243,11 @@ a:hover {
 
 #subscribe input { /* background: rgba(255, 255, 255, 0.52); */
   color: #ffab00;
-  vertical-align: middle;
-  width: 280px;
+  width: 380px;
   border: 1px solid #ffffff;
   padding: 10px;
   font-size: 14px;
+  text-align: center;
 }
 
 #subscribe input[type="button"] {
@@ -265,7 +269,18 @@ a:hover {
 
 #subscribe input[type="submit"] {
   width: 132px;
-  margin-left: -1px;
+  background: #f04e00;
+  border: 0px #8428f0 solid;
+  color: #fff;
+  text-align: center;
+  margin-top: 14px;
+}
+
+#subscribe select {
+  text-align: center;
+  width: 132px;
+  height: 40.8px;
+  margin-top: 3px;
   background: #f04e00;
   border: 0px #8428f0 solid;
   color: #fff;
@@ -293,11 +308,13 @@ a:hover {
 .countdownNum {
   color: #4cae4c;
 }
-.countdown {
+
+.styled {
   text-align: center;
   margin-top: 30px;
   padding: 60px 0;
   background-color: #ffbd00;
+  line-height: 150%
 }
 
 .styled div {
@@ -373,7 +390,6 @@ footer span {
 
 .featuresPro {
   margin-bottom: 30px;
-  float: left;
 }
 
 .featuresPro {
@@ -425,7 +441,9 @@ footer span {
   }
 
   .styled {
+
     margin-bottom: 30px;
+    color: #ffbd00;
   }
 
   #subscribe input[type="button"] {
@@ -433,7 +451,7 @@ footer span {
   }
 
   #subscribe input {
-    width: 80%;
+    width: 150%;
   }
 
   .featuresPro img {
