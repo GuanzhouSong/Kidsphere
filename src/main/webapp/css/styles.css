@@ -115,7 +115,7 @@ a:hover {
 }
 
 .slogan {
-  color: #ff5200;
+  color: #7a7572;
   font-weight: 300;
 }
 .logo {
@@ -130,6 +130,7 @@ a:hover {
 .logo h2 {
   color: #ff5200;
   font-weight: 500;
+  line-height: 150%;
 }
 
 .logo img {
@@ -242,7 +243,7 @@ a:hover {
 }
 
 #subscribe input { /* background: rgba(255, 255, 255, 0.52); */
-  color: #ffab00;
+  color: #ffd600;
   width: 380px;
   border: 1px solid #ffffff;
   padding: 10px;
@@ -444,7 +445,7 @@ footer span {
   .styled {
 
     margin-bottom: 30px;
-    color: #ffbd00;
+    color: #ffe300;
   }
 
   #subscribe input[type="button"] {

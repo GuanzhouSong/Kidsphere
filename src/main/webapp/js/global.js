@@ -5,7 +5,7 @@ $(function () {
   $('#submit').on("click", function () {
     var email = $('#email').val();
     if (!validateEmail(email)) {
-      alert("hmmm…… seems like it's not an email, please check again");
+      alert("Hey, this is not an email. Parenting is hard, but you still need to enter a real email.");
       return
     }
     var osType = $('#os :selected').val();
@@ -22,11 +22,11 @@ $(function () {
       }
     }).then(function (response) {
       if (response.status == 200) {
-        alert("Subscribed! Thank you so much!")
+        alert("Subscribed! Stay Tuned. We are this... close to complete!")
       } else if (response.status == 409) {
-        alert("Already subscribed, Thank you so much!")
+        alert("Already subscribed. We love your passion toward us!")
       } else {
-        alert("something goes wrong, please try again")
+        alert("Something goes wrong, please try again.")
       }
     })
   });
