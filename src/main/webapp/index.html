@@ -23,6 +23,30 @@ Theme by: WebThemez.com
 
   <link href="et-line-font/style.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Global site tag (gtag.js) - Google Ads: 761981835 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-761981835"></script>
+  <script> window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'AW-761981835');
+  </script>
+
+  <!-- Event snippet for Email Pre Regsiter conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <script> function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof (url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion',
+        {'send_to': 'AW-761981835/dC4wCNiyv5UBEIvXq-sC', 'event_callback': callback});
+    return false;
+  } </script>
+
 </head>
 
 <body id="home">
@@ -127,7 +151,10 @@ Theme by: WebThemez.com
               <label for="android" style="font-weight:normal !important;">Android</label>
             </div>
           </div>
-          <div align="center"><input id="submit" name="Subscribe" type="submit" value="Submit">
+          <div align="center"><input id="submit" name="Subscribe"
+                                     onclick="return gtag_report_conversion('http://www.kidsphere.us')"
+                                     type="submit"
+                                     value="Submit">
           </div>
         </div>
       </div>
@@ -135,7 +162,6 @@ Theme by: WebThemez.com
     </div>
   </div>
 </section>
-
 
 
 <!--Scripts-->
