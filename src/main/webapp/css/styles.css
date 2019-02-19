@@ -281,7 +281,7 @@ a:hover {
 }
 
 #subscribe input[type="email"] { /* background: rgba(255, 255, 255, 0.52); */
-  color: #FFF;
+  color: #000000;
   vertical-align: middle;
   width: 480px;
   height: 35px;
