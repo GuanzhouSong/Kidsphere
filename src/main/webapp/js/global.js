@@ -9,7 +9,7 @@ $(function () {
           "Hey, seems like this is not an email. We understand parenting is hard, let us make it easier.");
       return
     }
-    var osType = $('#os :selected').val();
+    var osType = $("input[type='radio']:checked").val();
     console.log(osType)
     var user = {
       email: email,
