@@ -5,10 +5,11 @@ $(function () {
   $('#submit').on("click", function () {
     var email = $('#email').val();
     if (!validateEmail(email)) {
-      alert("Hey, this is not an email. Parenting is hard, but you still need to enter a real email.");
+      alert(
+          "Hey, seems like this is not an email. We understand parenting is hard, let us make it easier.");
       return
     }
-    var osType = $('#os :selected').val();
+    var osType = $("input[type='radio']:checked").val();
     console.log(osType)
     var user = {
       email: email,

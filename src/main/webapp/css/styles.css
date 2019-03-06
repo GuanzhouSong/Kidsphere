@@ -242,10 +242,11 @@ a:hover {
   text-align: center;
 }
 
-#subscribe input { /* background: rgba(255, 255, 255, 0.52); */
+
+.checkbox { /* background: rgba(255, 255, 255, 0.52); */
   color: #ffd600;
-  width: 380px;
-  border: 1px solid #ffffff;
+  width: 15px;
+  border: 0px solid #ffffff;
   padding: 10px;
   font-size: 14px;
   text-align: center;
@@ -271,11 +272,22 @@ a:hover {
 #subscribe input[type="submit"] {
   font-size: large;
   width: 132px;
-  background: #f04e00;
+  background: #f03600;
   border: 0px #8428f0 solid;
   color: #fff;
+  height: 50px;
   text-align: center;
   margin-top: 14px;
+}
+
+#subscribe input[type="email"] { /* background: rgba(255, 255, 255, 0.52); */
+  color: #000000;
+  vertical-align: middle;
+  width: 480px;
+  height: 35px;
+  border: 0px solid #FFF;
+  padding: 10px;
+  font-size: 14px;
 }
 
 #subscribe select {
@@ -313,9 +325,8 @@ a:hover {
 
 .styled {
   text-align: center;
-  margin-top: 30px;
   padding: 60px 0;
-  background-color: #ffbd00;
+  background-color: #ff8d00;
   line-height: 150%
 }
 
@@ -374,20 +385,23 @@ footer span {
 }
 
 .subscribe {
-  background: #ff8c00;
+  background: #ff6e00;
 }
 
 .features {
-  background: #ff6e00;
+  background: #ffba00;
 }
 
 .features h2 {
   padding: 0 0 30px 0;
 }
 
+.features h3 {
+  margin: 0px 0 0px 0;
+}
+
 .features h4 {
   margin: 0px 0 10px 0;
-  font-weight: bold;
 }
 
 .featuresPro {
