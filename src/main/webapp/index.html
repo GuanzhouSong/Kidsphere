@@ -1,20 +1,8 @@
-<!--
-Theme by: WebThemez.com  
--->
 <!DOCTYPE HTML>
-<!--[if lt IE 7 ]>
-<html lang="en" class="ie ie6"> <![endif]-->
-<!--[if IE 7 ]>
-<html lang="en" class="ie ie7"> <![endif]-->
-<!--[if IE 8 ]>
-<html lang="en" class="ie ie8"> <![endif]-->
-<!--[if IE 9 ]>
-<html lang="en" class="ie ie9"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>KidSphere</title>
+  <title>Guanzhou</title>
   <meta name="description" content="">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <link rel="stylesheet" type="text/css"
@@ -22,146 +10,71 @@ Theme by: WebThemez.com
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link href="css/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <!-- Global site tag (gtag.js) - Google Ads: 761981835 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-761981835"></script>
   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 </head>
 
-<body id="home">
-<section class="main">
-  <div id="Content" class="wrapper topSection">
-    <div id="Header">
-      <div class="wrapper">
-        <div class="logo"><h1>KidSphere</h1></div>
-        <h2>Where to bring your kids for fun?</h2>
-        <h2>Find out on KidSphere!</h2>
-      </div>
-    </div>
-    <h3 class="slogan">Search all kid activities near you. Covers entire MA state.</h3>
-    <div class="wrapper" style="text-align: center; padding-bottom: 20px;">
-      <a href="https://itunes.apple.com/app/id1446148511">
-      <img src="images/download.png"/>
-    </a>
-      <script>
-        clipboard = new ClipboardJS('.btn');
-        function myFunction(){
-          alert("All set to share link with friends!");
-        }
-
-      </script>
-      <button class="btn btn-success" onclick="myFunction()" data-clipboard-text="clipboard.jshhhhh" style="color: #000; padding-left: 20px">
-        <i class="icon-share"></i>
-        share link with my friend!
-      </button>
-    </div>
-
-
-  </div>
-</section>
-<section class="features spacing">
-  <div class="container">
-    <h2 class="text-center">Features</h2>
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="featuresPro" style="overflow:hidden">
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center icon " style="vertical-align:bottom;">
-            <img height="80%" src="images/CalendarPage.PNG" width="80%"/>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center icon " style="vertical-align:bottom;">
-            <img height="80%" src="images/DetailedPage.PNG" width="80%"/>
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center icon " style="vertical-align:bottom;">
-            <img height="80%" src="images/SavedPage.PNG" width="80%"/>
-          </div>
+<body>
+<div className="container-fluid">
+  <div className="container-fluid ">
+    <nav
+            className="navbar navbar-expand navbar-dark bg-primary static-top">
+      <a className="navbar-brand pb-0 pt-0 d-none d-sm-inline" href="#">
+        <i className="fa fa-bars pr-3"></i> Course Manager
+      </a>
+      <form className="form-inline w-100">
+        <input className="form-control col-10" type="search"
+               placeholder="New Course Title"
+               onChange={this.handleChange}
+        />
+        <div className="col-1">
+          <a className="btn btn-danger" href="#"
+             onClick={this.createCourse}>
+            <i className="fa fa-plus"></i>
+          </a>
         </div>
-
-        <div class="featuresPro" style="overflow:hidden">
-
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center"
-               style="vertical-align:top">
-            <!--features 1-->
-            <h3>Search, filter and browse</h3>
-            <h3>It's all near you</h3>
-            <!--features 1 end-->
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center"
-               style="vertical-align:top">
-            <!--features 1-->
-            <h3>View detailed information</h3>
-            <h3>Comments from parents</h3>
-            <!--features 1 end-->
-          </div>
-          <div class="col-md-4 col-sm-4 col-xs-4 text-center"
-               style="vertical-align:top">
-            <!--features 1-->
-            <h3>Save your favorite events</h3>
-            <h3>With just one click</h3>
-            <!--features 1 end-->
-          </div>
+        <div className="col-1">
+          <a className="btn btn-warning" href="/login">
+            <i className="fa fa-user-circle"></i>
+          </a>
         </div>
-      </div>
+      </form>
+    </nav>
 
-
+    <table className="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>
+          <div className="d-none d-sm-block float-right"></div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </th>
+        <th>
+          <div
+                  className="d-none d-sm-block float-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </th>
+        <th>
+        </th>
+        <th>
+          <a className="no-text-decoration d-inline" href="/table">
+            <i
+                    className="fa fa-reorder pr-4"></i>
+          </a> <a className="no-decorate d-inline" href="#"> <i
+                className="fa fa-sort pr-4"></i></a>
+        </th>
+      </tr>
+      </thead>
+    </table>
+    <div className="card-deck">
+      {this.state.courses.map((course, key) =>
+      <CourseCard course={course} key={key}
+                  deleteCourse={this.deleteCourse}/>)}
     </div>
   </div>
-</section>
 
 
-<section class="description">
-  <div class="styled">
-    <h3>Wondering where to download this app? </h3>
-    <h3>The bad news is...nowhere. </h3>
-    <h3><b style="color:#f03600;font-size: xx-large">The good news</b> &nbsp;is: the APP is in
-      production! </h3>
-    <h3>Enter your Email below to get notified when we launch! </h3>
-    <h4>(Do so if you love our idea. That makes us work harder!)</h4>
-  </div>
-</section>
-
-
-<section class="subscribe spacing">
-
-  <div class="container">
-
-    <div id="subscribe">
-      <h3>Subscribe now and get Update!</h3>
-      <p class="subscribe-input">
-        <input class="subscribe_input" id="email" name="Email"
-               placeholder="Here is my Email! Love to see KidSphere alive!"
-               size="50"
-               type="email" value="">
-        <br>
-      <div align="center" style="font-size: large;">
-        <div>I'm using an&nbsp;
-          <div>
-            <div>
-              <input checked class="os" id="iphone" name="os" type="radio"
-                     value="IPHONE">
-              <label for="iphone"
-                     style="font-weight:normal !important;padding-top: 5px">iPhone</label>
-            </div>
-            <div>
-              <input class="os" id="android" name="os" type="radio" value="ANDROID">
-              <label for="android" style="font-weight:normal !important;">Android</label>
-            </div>
-          </div>
-          <div align="center"><input id="submit" name="Subscribe"
-                                     onclick="return gtag_report_conversion()"
-                                     type="submit"
-                                     value="Submit">
-          </div>
-        </div>
-      </div>
-      </p>
-    </div>
-  </div>
-</section>
-
-<script async src="images/static.js"></script>
-<span id="busuanzi_container_site_pv" hidden>本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-<!--Scripts-->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
+</div>
 
 </body>
 </html>
