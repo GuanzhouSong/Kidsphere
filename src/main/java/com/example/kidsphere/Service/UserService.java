@@ -4,6 +4,7 @@ import com.example.kidsphere.Model.Coupon;
 import com.example.kidsphere.Repository.CouponRepository;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,7 @@ public class UserService {
   @Autowired
   CouponRepository couponRepository;
 
+  @CrossOrigin(origins = "*", allowedHeaders = "*")
   @GetMapping("/api/cp/")
   public Iterable<Coupon> getAllCP() {
     return couponRepository.findAll();
