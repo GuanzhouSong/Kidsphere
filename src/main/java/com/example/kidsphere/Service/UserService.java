@@ -17,7 +17,7 @@ public class UserService {
   CouponRepository couponRepository;
 
   @GetMapping("/api/cp/")
-  public Iterable<Coupon> getAllCP(HttpServletResponse response) {
+  public Iterable<Coupon> getAllCP() {
     return couponRepository.findAll();
   }
 
