@@ -9,56 +9,45 @@ import java.util.Date;
 @Entity
 public class Coupon {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-  private CPType cpType;
+    private CPType cpType;
 
-  private Date expire;
+    private String description;
 
-  private boolean inUse;
+    private boolean inUse;
 
-  private boolean valid;
+    public int getId() {
+        return id;
+    }
 
-  public int getId() {
-    return id;
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public CPType getCpType() {
+        return cpType;
+    }
 
+    public void setCpType(CPType cpType) {
+        this.cpType = cpType;
+    }
 
-  public CPType getCpType() {
-    return cpType;
-  }
+    public String getDescription() {
+        return description;
+    }
 
-  public void setCpType(CPType cpType) {
-    this.cpType = cpType;
-  }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-  public Date getExpire() {
-    return expire;
-  }
+    public boolean isInUse() {
+        return inUse;
+    }
 
-  public void setExpire(Date expire) {
-    this.expire = expire;
-  }
-
-  public boolean isInUse() {
-    return inUse;
-  }
-
-  public void setInUse(boolean inUse) {
-    this.inUse = inUse;
-  }
-
-  public boolean isValid() {
-    return valid;
-  }
-
-  public void setValid(boolean valid) {
-    this.valid = valid;
-  }
+    public void setInUse(boolean inUse) {
+        this.inUse = inUse;
+    }
 }
