@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.Collection;
 import java.util.List;
 
-public interface UserRepository extends CrudRepository<Coupon, Integer> {
+public interface CouponRepository extends CrudRepository<Coupon, Integer> {
 
     @Query("SELECT c FROM coupon")
     List<Coupon> findAllCoupon();
