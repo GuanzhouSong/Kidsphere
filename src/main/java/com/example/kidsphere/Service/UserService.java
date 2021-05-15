@@ -67,6 +67,25 @@ public class UserService {
         return sb.toString();
     }
 
+    public String buildIndex(){
+        List<LuDate> lu = this.getAllDate();
+        StringBuilder sb = new StringBuilder();
+
+        if(lu.size()>0){
+            sb.append("<br><b>").append("距离上次时间：").append(this.getDiff(lu.get(0).getTimestamp().getTime(), new Date().getTime())).append("<b/><br/>");
+        }
+
+        for(int i = 0; i < Math.min(10, lu.size()); i++){
+            sb.append("<br>").append(" ").append(lu.get(i).toString()).append("<br/>");
+            if(i != lu.size()-1){
+                sb.append("<br>-----").append(this.getDiff(lu.get(i+1).getTimestamp().getTime(), lu.get(i).getTimestamp().getTime())).append("-----<br/>");
+            }
+        }
+
+        sb.append("<br/><a href=\"/new\">I did it AGAIN!</a>");
+        return sb.toString();
+    }
+
 
 }
 
