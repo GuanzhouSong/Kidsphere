@@ -76,14 +76,18 @@ public class UserService {
         }
 
         for(int i = 0; i < Math.min(10, lu.size()); i++){
-            sb.append("<br>").append(" ").append(lu.get(i).toString()).append("<br/>");
+            sb.append("<br>").append(" ").append(lu.get(i).toString()).append("   <a href=\"/delete/").append(lu.get(i).getUuid()).append("\">DELETE</a>").append("<br/>");
             if(i != lu.size()-1){
                 sb.append("<br>-----").append(this.getDiff(lu.get(i+1).getTimestamp().getTime(), lu.get(i).getTimestamp().getTime())).append("-----<br/>");
             }
         }
 
-        sb.append("<br/><a href=\"/new\">I did it AGAIN!</a>");
+        sb.append("<br/><a href=\"/new\">I did it AGAIN!</a><br/>");
         return sb.toString();
+    }
+
+    public void deleteByUUID(int id){
+        couponRepository.deleteById(id);
     }
 
 

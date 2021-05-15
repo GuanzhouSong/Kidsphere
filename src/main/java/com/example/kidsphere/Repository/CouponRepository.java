@@ -14,4 +14,5 @@ public interface CouponRepository extends CrudRepository<LuDate, Integer> {
     @Modifying
     @Query(value = "INSERT INTO lu_date VALUES (default, CURRENT_TIMESTAMP)", nativeQuery = true)
     void newRecord();
+
 }

@@ -3,6 +3,7 @@ package com.example.kidsphere.Controller;
 import com.example.kidsphere.Model.LuDate;
 import com.example.kidsphere.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,6 +39,20 @@ public class DateController
     public String newRecordYes()
     {
         service.newRecord();
+        return "<br/><a href=\"/\">Return To Home</a>";
+    }
+
+    @RequestMapping("/delete/{id}")
+    public String delete(@PathVariable("id") int id)
+    {
+        //service.deleteByUUID(id);
+        return String.format("<br/><a href=\"/delete/yes/%d\">YES</a><br/><br/><a href=\"/\">NO</a><br/>", id);
+    }
+
+    @RequestMapping("/delete/yes/{id}")
+    public String deleteYes(@PathVariable("id") int id)
+    {
+        service.deleteByUUID(id);
         return "<br/><a href=\"/\">Return To Home</a>";
     }
 }
