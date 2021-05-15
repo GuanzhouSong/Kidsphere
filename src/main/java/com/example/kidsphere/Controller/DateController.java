@@ -31,6 +31,12 @@ public class DateController
     @RequestMapping("/new")
     public String newRecord()
     {
+        return "<br/><a href=\"/new/yes\">YES</a><br/><br/><a href=\"/\">NO</a><br/>";
+    }
+
+    @RequestMapping("/new/yes")
+    public String newRecordYes()
+    {
         service.newRecord();
         return "<br/><a href=\"/\">Return To Home</a>";
     }
