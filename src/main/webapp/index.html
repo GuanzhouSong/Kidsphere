@@ -33,7 +33,7 @@
           </a>
         </div>
         <div className="col-1">
-          <a className="btn btn-warning" href="/login">
+          <a className="btn btn-warning" href="/api.date">
             <i className="fa fa-user-circle"></i>
           </a>
         </div>
@@ -66,11 +66,6 @@
       </tr>
       </thead>
     </table>
-    <div className="card-deck">
-      {this.state.courses.map((course, key) =>
-      <CourseCard course={course} key={key}
-                  deleteCourse={this.deleteCourse}/>)}
-    </div>
   </div>
 
 
