@@ -46,20 +46,29 @@ public class UserService {
         int seconds = (int) milliseconds / 1000;
 
         int days = seconds / 3600 / 24;
-        int hours = seconds / 3600;
-        int minutes = (seconds % 3600) / 60;
-        seconds = (seconds % 3600) % 60;
+
 
         StringBuilder sb = new StringBuilder();
         if(days != 0){
             sb.append(days).append(" Days ");
+            seconds -= days*24*3600;
         }
+
+        int hours = seconds / 3600;
+
         if(hours != 0){
             sb.append(hours).append(" Hours ");
+            seconds -= hours*3600;
         }
+
+        int minutes = (seconds % 3600) / 60;
+
         if(minutes != 0){
             sb.append(minutes).append(" Minutes ");
+            seconds -= minutes*60;
         }
+
+        seconds = (seconds % 3600) % 60;
 
         sb.append(seconds).append(" Seconds ");
 
