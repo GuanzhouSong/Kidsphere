@@ -40,7 +40,7 @@ public class LuDate {
 
     @Override
     public String toString(){
-        long epochTime = timestamp.getTime() - 4*3600000;
+        long epochTime = timestamp.getTime();
         Date date = new Date(epochTime);
         DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm EEEE");
         return formatter.format(date);
