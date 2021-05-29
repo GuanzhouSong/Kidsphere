@@ -15,7 +15,7 @@ public class LuDate {
 
     public LuDate(int uuid){
         this.uuid = uuid;
-        this.timestamp = new Timestamp(new Date().getTime()+4*60*60*1000);
+        this.timestamp = new Timestamp(new Date().getTime());
     }
 
     public int getUuid()
