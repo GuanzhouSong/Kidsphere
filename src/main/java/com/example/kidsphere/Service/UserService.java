@@ -17,12 +17,11 @@ import java.util.*;
 @Service
 public class UserService {
 
-    @Autowired
-    CouponRepository couponRepository;
+
+    CouponRepository couponRepository = new CouponRepository();
 
     public List<LuDate> getAllDate() {
-        List<LuDate> list = new ArrayList<>();
-        couponRepository.findAll().forEach(list::add);
+        List<LuDate> list = new ArrayList<>(couponRepository.findAll());
         list.sort((a,b) -> {
             if(a.getTimestamp().equals(b.getTimestamp())){
                 return 0;

@@ -1,25 +1,21 @@
 package com.example.kidsphere.Model;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
 
-@Entity
-@Table(name = "lu_date")
+
 public class LuDate {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int uuid;
 
     private Timestamp timestamp;
 
-    public LuDate(){
-        uuid = 0;
-        timestamp = new Timestamp(new Date().getTime()+4*60*60*1000);
+    public LuDate(int uuid){
+        this.uuid = uuid;
+        this.timestamp = new Timestamp(new Date().getTime()+4*60*60*1000);
     }
 
     public int getUuid()

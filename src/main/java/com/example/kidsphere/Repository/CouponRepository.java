@@ -1,18 +1,31 @@
 package com.example.kidsphere.Repository;
 
 import com.example.kidsphere.Model.LuDate;
-import org.springframework.data.jpa.repository.Modifying;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
-import org.springframework.transaction.annotation.Transactional;
 
-public interface CouponRepository extends CrudRepository<LuDate, Integer> {
+import java.util.*;
+
+public class CouponRepository{
 
 
-    @Transactional
-    @Modifying
-    @Query(value = "INSERT INTO lu_date VALUES (default, CURRENT_TIMESTAMP)", nativeQuery = true)
-    void newRecord();
+    TreeMap<Integer, LuDate> database;
+
+    int uuid = 0;
+
+    public CouponRepository(){
+        database = new TreeMap<Integer, LuDate>((a,b) -> (a-b));
+        uuid = 0;
+    }
+
+    public Collection<LuDate> findAll(){
+        return database.values();
+    }
+
+    public void newRecord(){
+        database.put(uuid, new LuDate(uuid++));
+    }
+
+    public void deleteById(int uuid){
+        database.remove(uuid);
+    }
 
 }
